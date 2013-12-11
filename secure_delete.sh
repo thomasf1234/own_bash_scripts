@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#find . -type d -mmin -10 | xargs ls -lt
+
+
 #secure delete file and temporary if they exist
 #must pass in the file path of the non-temporary file i.e.
 #bash secure_delete.sh /home/username/dir/file
