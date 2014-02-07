@@ -43,7 +43,7 @@ function secure_delete_file {
   BYTES="$(cd $DIR && (ls -lt | grep $FILE_NAME$ | awk '{print $5}'))"
   COMMAND="dd if=/dev/urandom of=$FILE_PATH bs=$BYTES count=1 conv=notrunc"
   echo "**********WIPING '$FILE_PATH' **********"
-  for ((n=1;n<8;n++))
+  for ((n=1;n<3;n++))
   do 
     echo "beginning to execute secure wipe $n ..."
     $COMMAND 
@@ -92,7 +92,6 @@ function check_if_still_there {
     echo "**********files have been securely deleted.**************"
   fi
 }
-
 
 check_input $1
 
