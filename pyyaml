@@ -1,0 +1,11 @@
+sudo apt-get install python-pip
+sudo apt-get install python-dev
+sudo pip install pyyaml
+
+
+import yaml
+
+file_path = '/home/fpdev/own_bash_scripts/test_yaml.yml'
+file = open(file_path)
+yaml.load(file)
+file.close
