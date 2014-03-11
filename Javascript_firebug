@@ -1,0 +1,35 @@
+Javascript- Firebug
+
+$('#entry-3').children('#offer_id').val(null)
+
+
+
+
+$('#entry-3').children('#offer_id').val() == true
+
+
+Running jasmine tests
+https://github.com/pivotal/jasmine-gem
+
+bundle exec rake jasmine
+
+then all tests will run when the following page is rendered:
+http://localhost:8888
+
+
+
+
+
+//check if correctly done
+    describe('offer', function(){
+        var template = orderView.getEntryTemplate();
+        it("should set the offer on the line if a string that is not 'nil' is passed", function(){
+            orderView.setOffer(2,'1');
+            expect($('#entry-2').children('#offer_id').val()).toEqual('1');
+        });
+
+        it("should remove the offer element on the line if 'nil' is passed", function(){
+            orderView.setOffer(2,'nil');
+            expect($('#entry-2').children('#offer_id').length).toEqual(0);
+        });
+    });
