@@ -7,5 +7,5 @@ import yaml
 
 file_path = '/home/fpdev/own_bash_scripts/test_yaml.yml'
 file = open(file_path)
-yaml.load(file)
+dictionary = yaml.load(file)
 file.close

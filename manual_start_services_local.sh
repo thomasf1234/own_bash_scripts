@@ -99,6 +99,7 @@ function create_commands {
 
   if [ "$(element "${services[$i]}" 0)" == "customerservice" ]
   then
+    cmd+="bundle exec rake db:seed RAILS_ENV=test"
     cmd+="bundle exec rails s -p 3001 -e testintegration; "
   elif [ "$(element "${services[$i]}" 0)" == "catalog_service" ]
   then
